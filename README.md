@@ -59,34 +59,45 @@ O sistema oferece as seguintes funcionalidades:
 
 ## Estrutura do Código
 - **Conexão com o Banco de Dados:**
+  
   - A função `conectar_banco` estabelece a conexão com o MySQL.
+    
 - **Operações CRUD:**
+  
   - `cadastrar_cliente`: Insere um novo cliente.
   - `atualizar_cliente`: Atualiza os dados de um cliente existente.
   - `mostrar_dados`: Exibe todos os clientes cadastrados.
   - `excluir_cliente`: Remove um cliente do banco de dados.
+    
 - **Menu Interativo:**
   - O menu principal permite ao usuário escolher entre as operações disponíveis.
 
 ## Exemplo de Uso
 1. Cadastre um novo cliente:
+   
    ```
    Digite o nome do cliente: João Silva
    Digite o email do cliente: joao.silva@example.com
    Digite o ano de nascimento do cliente: 1990
    Digite o sexo do cliente (M/F): M
    ```
-2. Atualize um cliente existente:
+   
+3. Atualize um cliente existente:
+   
    ```
    Digite o ID do cliente que deseja atualizar: 1
    Digite o novo nome (ou pressione Enter para manter o atual): João Oliveira
    ```
-3. Visualize todos os clientes:
+   
+5. Visualize todos os clientes:
+   
    ```
    ID  Nome           Email                   Ano_Nascimento  Sexo
    1   João Oliveira  joao.silva@example.com  1990            M
    ```
-4. Exclua um cliente:
+   
+7. Exclua um cliente:
+   
    ```
    Digite o ID do cliente que deseja excluir: 1
    ```
