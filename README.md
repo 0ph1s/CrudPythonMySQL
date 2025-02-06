@@ -28,6 +28,7 @@ O sistema oferece as seguintes funcionalidades:
    - Python 3.x instalado.
    - MySQL Server instalado e configurado.
    - Biblioteca `mysql-connector-python` e `pandas` instaladas.
+     
      ```bash
      pip install mysql-connector-python pandas
      ```
