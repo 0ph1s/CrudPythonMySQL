@@ -1,40 +1,40 @@
-# Sistema de Gerenciamento de Clientes em Python com MySQL
+# Customer Management System in Python with MySQL  
 
-Este repositório contém um sistema básico de gerenciamento de clientes desenvolvido em Python, utilizando o MySQL como banco de dados. O sistema permite realizar operações CRUD (Create, Read, Update, Delete) em uma tabela de clientes, incluindo cadastro, atualização, visualização e exclusão de registros.
+This repository contains a basic customer management system developed in Python, using MySQL as the database. The system allows CRUD (Create, Read, Update, Delete) operations on a customer table, including registration, updating, viewing, and deleting records.  
 
-## ⚠ Aviso
-Este código foi desenvolvido **apenas para fins de aprendizado básico**. Ele não inclui validação de entrada, tratamento adequado de erros ou medidas de segurança, como proteção contra SQL Injection. **Não é recomendado para uso em produção.**
+## ⚠ Warning  
+This code was developed **for basic learning purposes only**. It does not include input validation, proper error handling, or security measures such as SQL Injection protection. **It is not recommended for production use.**  
 
-## 📌 Recomendação
-Para um projeto real, considere utilizar frameworks como **Django** ou **Flask** e implementar medidas de segurança adequadas, como:
-- Validação de entradas.
-- Proteção contra SQL Injection.
-- Autenticação e autorização.
-- Tratamento de erros robusto.
+## 📌 Recommendation  
+For a real project, consider using frameworks like **Django** or **Flask** and implementing proper security measures, such as:  
+- Input validation.  
+- SQL Injection protection.  
+- Authentication and authorization.  
+- Robust error handling.  
 
-## Funcionalidades
-O sistema oferece as seguintes funcionalidades:
-1. **Cadastrar novo cliente:**
-   - Insere um novo cliente no banco de dados com nome, email, ano de nascimento e sexo.
-2. **Atualizar cliente existente:**
-   - Permite atualizar os dados de um cliente existente com base no ID.
-3. **Mostrar dados dos clientes:**
-   - Exibe todos os clientes cadastrados em formato de tabela usando `pandas`.
-4. **Excluir cliente:**
-   - Remove um cliente do banco de dados com base no ID.
+## Features  
+The system offers the following features:  
+1. **Register a new customer:**  
+   - Inserts a new customer into the database with name, email, birth year, and gender.  
+2. **Update an existing customer:**  
+   - Allows updating a customer’s details based on their ID.  
+3. **Display customer data:**  
+   - Shows all registered customers in a table format using `pandas`.  
+4. **Delete a customer:**  
+   - Removes a customer from the database based on their ID.  
 
-## Como Executar
-1. **Pré-requisitos:**
-   - Python 3.x instalado.
-   - MySQL Server instalado e configurado.
-   - Biblioteca `mysql-connector-python` e `pandas` instaladas.
+## How to Run  
+1. **Prerequisites:**  
+   - Python 3.x installed.  
+   - MySQL Server installed and configured.  
+   - `mysql-connector-python` and `pandas` libraries installed.  
      
      ```bash
      pip install mysql-connector-python pandas
-     ```
-2. **Configuração do Banco de Dados:**
-   - Crie um banco de dados chamado `Teste` no MySQL.
-   - Crie uma tabela `clientes` com a seguinte estrutura:
+     ```  
+2. **Database Setup:**  
+   - Create a database named `Teste` in MySQL.  
+   - Create a `clientes` table with the following structure:  
      
      ```sql
      CREATE TABLE clientes (
@@ -44,63 +44,61 @@ O sistema oferece as seguintes funcionalidades:
          ano_nascimento INT,
          sexo CHAR(1)
      );
-     ```
-3. **Executar o código:**
-   - Clone o repositório:
+     ```  
+3. **Run the Code:**  
+   - Clone the repository:  
      
      ```bash
-     git clone https://github.com/seu-usuario/nome-do-repositorio.git
-     ```
-   - Execute o script Python:
+     git clone https://github.com/your-username/repository-name.git
+     ```  
+   - Run the Python script:  
      
      ```bash
      python gerenciamento_clientes.py
-     ```
+     ```  
 
-## Estrutura do Código
-- **Conexão com o Banco de Dados:**
-  
-  - A função `conectar_banco` estabelece a conexão com o MySQL.
+## Code Structure  
+- **Database Connection:**  
+  - The `conectar_banco` function establishes a connection with MySQL.  
     
-- **Operações CRUD:**
-  
-  - `cadastrar_cliente`: Insere um novo cliente.
-  - `atualizar_cliente`: Atualiza os dados de um cliente existente.
-  - `mostrar_dados`: Exibe todos os clientes cadastrados.
-  - `excluir_cliente`: Remove um cliente do banco de dados.
+- **CRUD Operations:**  
+  - `cadastrar_cliente`: Inserts a new customer.  
+  - `atualizar_cliente`: Updates an existing customer’s details.  
+  - `mostrar_dados`: Displays all registered customers.  
+  - `excluir_cliente`: Removes a customer from the database.  
     
-- **Menu Interativo:**
-  - O menu principal permite ao usuário escolher entre as operações disponíveis.
+- **Interactive Menu:**  
+  - The main menu allows the user to choose between available operations.  
 
-## Exemplo de Uso
-1. Cadastre um novo cliente:
+## Usage Example  
+1. Register a new customer:  
    
    ```
-   Digite o nome do cliente: João Silva
-   Digite o email do cliente: joao.silva@example.com
-   Digite o ano de nascimento do cliente: 1990
-   Digite o sexo do cliente (M/F): M
-   ```
+   Enter the customer's name: João Silva
+   Enter the customer's email: joao.silva@example.com
+   Enter the customer's birth year: 1990
+   Enter the customer's gender (M/F): M
+   ```  
    
-3. Atualize um cliente existente:
-   
-   ```
-   Digite o ID do cliente que deseja atualizar: 1
-   Digite o novo nome (ou pressione Enter para manter o atual): João Oliveira
-   ```
-   
-5. Visualize todos os clientes:
+3. Update an existing customer:  
    
    ```
-   ID  Nome           Email                   Ano_Nascimento  Sexo
-   1   João Oliveira  joao.silva@example.com  1990            M
-   ```
+   Enter the ID of the customer you want to update: 1
+   Enter the new name (or press Enter to keep the current one): João Oliveira
+   ```  
    
-7. Exclua um cliente:
+5. View all customers:  
    
    ```
-   Digite o ID do cliente que deseja excluir: 1
+   ID  Name           Email                   Birth_Year  Gender
+   1   João Oliveira  joao.silva@example.com  1990        M
+   ```  
+   
+7. Delete a customer:  
+   
    ```
+   Enter the ID of the customer you want to delete: 1
+   ```  
 
-## Contribuições
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias, correções ou novas funcionalidades.
+## Contributions  
+Contributions are welcome! Feel free to open issues or submit pull requests with improvements, fixes, or new features.  
