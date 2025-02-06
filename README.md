@@ -35,6 +35,7 @@ O sistema oferece as seguintes funcionalidades:
 2. **Configuração do Banco de Dados:**
    - Crie um banco de dados chamado `Teste` no MySQL.
    - Crie uma tabela `clientes` com a seguinte estrutura:
+     
      ```sql
      CREATE TABLE clientes (
          id INT AUTO_INCREMENT PRIMARY KEY,
@@ -46,10 +47,12 @@ O sistema oferece as seguintes funcionalidades:
      ```
 3. **Executar o código:**
    - Clone o repositório:
+     
      ```bash
      git clone https://github.com/seu-usuario/nome-do-repositorio.git
      ```
    - Execute o script Python:
+     
      ```bash
      python gerenciamento_clientes.py
      ```
